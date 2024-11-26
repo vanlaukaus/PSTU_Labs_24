@@ -1,23 +1,23 @@
-﻿#include <iostream>
+#include <iostream>
+
 using namespace std;
 
 int main()
 {
-    float a, b;
-    cin >> a >> b;
-    if (a > 0 && b > 0) 
+    int a, b, c, max;
+    cin >> a >> b >> c;
+    if (a >= b) 
     {
-        cout << a / b << endl;
-        return 0;
-    }
-    else if ((a == 0 || b == 0) && (a != 0 || b != 0)) 
-    {
-        cout << a / b << endl;
-        return 0;
+        max = a;
     }
     else 
     {
-        cout << "You can't divide by zero!" << endl;
-        return 0;
+        max = b;
     }
+    if (c > max) 
+    {
+        max = c;
+    }
+    cout << max << endl;
+    return 0;
 }
