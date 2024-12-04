@@ -38,4 +38,4 @@
 | 2_22 | ❌ | ❌ |  |
 | 2_23 | ❌ | ❌ |  |
 
-![alt text](https://github.com/vanlaukaus/PSTU_Labs_24/blob/Sem_1/misc/NxxwbeJRGTw.jpg?raw=true)
+![alt text](https://raw.githubusercontent.com/vanlaukaus/PSTU_Labs_24/Sem_1/misc/NxxwbeJRGTw.jpg)
