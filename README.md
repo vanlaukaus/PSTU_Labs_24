@@ -1,7 +1,7 @@
 # PSTU_Labs_24
 Обухов Артемий Владимирович, ИВТ-24-1б
 
-| ID задания | Код | Схема | Примечания |                                                  ![alt text]([http://url/to/img.png](https://sun9-21.userapi.com/impg/eww1oBrYSxrfis9EuAI207YQ1V0uVAouOF0RnA/NxxwbeJRGTw.jpg?size=2048x1536&quality=96&sign=af34434f8b2715ca04f940b440e87ca2&type=album))
+| ID задания | Код | Схема | Примечания |                                                 
 | :----: | :----: | :----: | :----: |
 | 1_1 | ✅ | ❌ |  |
 | 1_2 | ✅ | ❌ |  |
@@ -37,3 +37,5 @@
 | 2_21 | ❌ | ❌ |  |
 | 2_22 | ❌ | ❌ |  |
 | 2_23 | ❌ | ❌ |  |
+
+![alt text](https://github.com/vanlaukaus/PSTU_Labs_24/blob/Sem_1/misc/NxxwbeJRGTw.jpg?raw=true)
