@@ -37,5 +37,10 @@
 | 2_21 | ❌ | ❌ |  |
 | 2_22 | ❌ | ❌ |  |
 | 2_23 | ❌ | ❌ |  |
+| Логика | 5 | 5 |  |
+| eq_half | ❌ | ❌ |  |
+| eq_Newton | ❌ | ❌ |  |
+| eq_it | ❌ | ❌ |  |
+| recursion | ❌ | ❌ |  |
 
 ![alt text](https://github.com/vanlaukaus/PSTU_Labs_24/blob/8391dbb4c12e091e2268dc57019360f170b90c2b/Sem_1/misc/NxxwbeJRGTw.jpg)
