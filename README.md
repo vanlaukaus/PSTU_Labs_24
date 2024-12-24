@@ -1,6 +1,14 @@
 # PSTU_Labs_24
 Обухов Артемий Владимирович, ИВТ-24-1б
 
+<details><summary>A dropdown list for markdown</summary>
+
+   1. First item must be preceeded with an empty line.
+   1. Markdown renders **perfectly**.
+   1. Extra item.
+
+</details>
+
 ### Статистика выполнения заданий за I семестр
 | ID задания | Код | Схема | Примечания |                                                 
 | :----: | :----: | :----: | :----: |
