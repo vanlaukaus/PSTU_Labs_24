@@ -4,7 +4,6 @@ int main()
 {
 	int n, t, max, min;
 	cin >> n;
-
 	cin >> t;
 	max = min = t;
 	for (int i=0; i<n-1; i++)
