@@ -2,33 +2,29 @@
 using namespace std;
 int main()
 {
-    int n;
-
-    cin >> n;
-    if (n < 3 && (n % 2) == 0)
-    {
-        cout << "You need an odd number greater than 3!" << endl;
-    }
-    else
-    {
-        int spaces = n / 2;
-        int stars = 1;
-
-        for (int i = 0; i < (n + 1) / 2; i++)
-        {
-            for (int j = 0; j < spaces; j++)
-            {
-                cout << " ";
-            }
-            spaces--;
-            for (int j = 0; j < stars; j++)
-            {
-                cout << "*";
-            }
-            stars += 2;
-            cout << endl;
-        }
-    }
-    return 0;
+	int n;
+	cin >> n;
+	if (n % 2 == 0 || n <= 3)
+	{
+		cout << "Ошибка" << endl;
+		return 0;
+	}
+	else
+	{
+		for (int i = 0; i <= n; i++)
+		{
+			if (i % 2 != 0)
+			{
+				for (int q = 1; q <= (n - i) / 2; q++)
+				{
+					cout << " ";
+				}
+				for (int j = 0; j < i; j++)
+					cout << "*";
+				cout << endl;
+			}
+		}
+	}
+	return 0;
 }
 
