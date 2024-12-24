@@ -1,7 +1,5 @@
 # PSTU_Labs_24
-<p style="text-align: center;">
-  Обухов Артемий Владимирович, ИВТ-24-1б
-</p>
+<p style="text-align: center;">Обухов Артемий Владимирович, ИВТ-24-1б</p>
 
 <details>
 <summary><h2>Статистика выполнения заданий за I семестр</h2></summary>
