@@ -1,15 +1,8 @@
 # PSTU_Labs_24
 Обухов Артемий Владимирович, ИВТ-24-1б
 
-<details><summary>A dropdown list for markdown</summary>
+<details><summary>### Статистика выполнения заданий за I семестр</summary>
 
-   1. First item must be preceeded with an empty line.
-   1. Markdown renders **perfectly**.
-   1. Extra item.
-
-</details>
-
-### Статистика выполнения заданий за I семестр
 | ID задания | Код | Схема | Примечания |                                                 
 | :----: | :----: | :----: | :----: |
 | 1_1 | ✅ | ✅ |  |
@@ -52,5 +45,7 @@
 | eq_it | ❌ | ❌ |  |
 | recursion | ❌ | ❌ |  |
 | Сумма | 34✅ | 17✅ |  |
+
+</details>
 
 ![alt text](https://github.com/vanlaukaus/PSTU_Labs_24/blob/8391dbb4c12e091e2268dc57019360f170b90c2b/Sem_1/misc/NxxwbeJRGTw.jpg)
