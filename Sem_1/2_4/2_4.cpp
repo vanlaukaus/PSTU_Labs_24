@@ -6,7 +6,7 @@ int main()
 	cin >> n;
 	if (n % 2 == 0 || n <= 3)
 	{
-		cout << "Ошибка" << endl;
+		cout << "Error" << endl;
 		return 0;
 	}
 	else
