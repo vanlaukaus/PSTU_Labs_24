@@ -1,7 +1,8 @@
 # PSTU_Labs_24
 
 <p align="center">
-  <img width="400" height="250" src="https://github.com/blademoon/Markdown/blob/main/Picture/cat.jpg">
+  Обухов Артемий
+  ИВТ-24-1б
 </p>
 
 <details>
