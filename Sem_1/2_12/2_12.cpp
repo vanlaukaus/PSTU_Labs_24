@@ -14,6 +14,5 @@ int main()
 		else if (t < min) {min = t;}
 	}
 	cout << max+min << endl;	
-
 	return 0;
 }
