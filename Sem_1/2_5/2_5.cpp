@@ -1,27 +1,18 @@
 #include <iostream>
 using namespace std;
-
 int main()
 {
-    cout << "Any natural number greater than 2: ";
-    int N;
-    cin >> N;
-    if (N>2){
-        for (int i = 0; i < N; i++){ 
-            for (int j = 0; j < N-i; j++)
-            {
-                cout << " ";
-            }
-            for (int k = 0; k <= i; k++)
-            {
-                cout << "*";
-            }
-            cout << endl;
-        }
-    }
-    else {
-        cout << "The number has to be greater than 2!" << endl;
-    }
-    return 0;
-    }
-
+	int n;
+	cin >> n;
+	if (n <= 2 ) { cout << "Erro! The number must be greater than 2" << endl; return 0; }
+	else 
+	{
+		for (int i = 0; i < n; i++)
+		{
+			for (int j = 0; j < n - i; j++) { cout << " "; }
+			for (int j = 0; j <= i; j++) { cout << "*"; }
+			cout << endl;
+		}
+	}
+	return 0;
+}
