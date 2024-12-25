@@ -1,10 +1,8 @@
 #include <iostream>
 #include <cmath>
 using namespace std;
-
 int main()
 {
-    cout << "Any natural number with an integer square root: ";
 	int n, k;
 	cin >> n;
 	k = sqrt(n);
