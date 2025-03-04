@@ -21,9 +21,9 @@ int main() {
         cout << ring[i] << " ";
         if (i == 9)
         {
-            for (int ii = 0; ii <= k; ii++)
+            for (int n = 0; ii <= k; n++)
             {
-                cout << ring[ii] << " ";
+                cout << ring[n] << " ";
             }
         }
     }
