@@ -2,31 +2,54 @@
 
 #include <iostream>
 using namespace std;
+
 int main() {
-    //1
-    int ring[10] = { 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 };
-    int k;
-    cout << "1.1" << endl;
-    for (int i = 0; i < 10; i++)
-    {
-        cout << ring[i] << " ";
+    const int ogsize = 10;
+    int arr[ogsize] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+    int currsize = ogsize;
+
+    cout << "Original array: ";
+    for (int i = 0; i < currsize; i++) {
+        cout << arr[i] << " ";
     }
-    cout << endl;
-    cout << "Enter k: ";
-    cin >> k;
-    //4
-    cout << "4.4" << endl;
-    for (int i = k; i < 10; i++)
-    {
-        cout << ring[i] << " ";
-        if (i == 9)
-        {
-            for (int n = 0; n <= k; n++)
-            {
-                cout << ring[n] << " ";
-            }
+    cout << endl << endl;
+
+    // 4.2
+    int k = 3;
+    cout << "Left print from k=" << k << ": ";
+    if (currsize > 0) {
+        k = k % currsize;
+        for (int i = 0; i < currsize; i++) {
+            cout << arr[(k - i + currsize) % currsize] << " ";
+        }
+    }
+    cout << endl << endl;
+
+    // 4.3
+    if (currsize > 0) {
+        for (int i = 0; i < currsize - 1; i++) {
+            arr[i] = arr[i + 1];
+        }
+        currsize--;
+        if (currsize > 0) currsize--;
+    }
+
+    cout << "Modified array: ";
+    for (int i = 0; i < currsize; i++) {
+        cout << arr[i] << " ";
+    }
+    cout << endl << endl;
+
+    // 4.4
+    k = 2;
+    cout << "Right print from k=" << k << ": ";
+    if (currsize > 0) {
+        k = k % currsize;
+        for (int i = 0; i < currsize; i++) {
+            cout << arr[(k + i) % currsize] << " ";
         }
     }
     cout << endl;
+
     return 0;
 }
