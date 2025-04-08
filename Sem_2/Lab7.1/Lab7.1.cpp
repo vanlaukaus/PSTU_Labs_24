@@ -1,7 +1,8 @@
+//v15
 #include <iostream>
 #include <cmath>
 
-// Перегруженная функция для возведения целого числа в степень n
+// ГЏГҐГ°ГҐГЈГ°ГіГ¦ГҐГ­Г­Г Гї ГґГіГ­ГЄГ¶ГЁГї Г¤Г«Гї ГўГ®Г§ГўГҐГ¤ГҐГ­ГЁГї Г¶ГҐГ«Г®ГЈГ® Г·ГЁГ±Г«Г  Гў Г±ГІГҐГЇГҐГ­Гј n
 int power(int base, int exp) {
     if (exp == 0) return 1;
     int result = 1;
@@ -11,7 +12,7 @@ int power(int base, int exp) {
     return result;
 }
 
-// Перегруженная функция для извлечения корня степени n из десятичного числа
+// ГЏГҐГ°ГҐГЈГ°ГіГ¦ГҐГ­Г­Г Гї ГґГіГ­ГЄГ¶ГЁГї Г¤Г«Гї ГЁГ§ГўГ«ГҐГ·ГҐГ­ГЁГї ГЄГ®Г°Г­Гї Г±ГІГҐГЇГҐГ­ГЁ n ГЁГ§ Г¤ГҐГ±ГїГІГЁГ·Г­Г®ГЈГ® Г·ГЁГ±Г«Г 
 double root(double number, int n) {
     if (n == 0) {
         std::cerr << "Error, the root's power cannot be zero." << std::endl;
@@ -25,12 +26,12 @@ double root(double number, int n) {
 }
 
 int main() {
-    // Демонстрация работы функции power
+    // Г„ГҐГ¬Г®Г­Г±ГІГ°Г Г¶ГЁГї Г°Г ГЎГ®ГІГ» ГґГіГ­ГЄГ¶ГЁГЁ power
     int base = 2;
     int exp = 10;
     std::cout << base << " raised to the power of " << exp << " = " << power(base, exp) << std::endl;
 
-    // Демонстрация работы функции root
+    // Г„ГҐГ¬Г®Г­Г±ГІГ°Г Г¶ГЁГї Г°Г ГЎГ®ГІГ» ГґГіГ­ГЄГ¶ГЁГЁ root
     double number = 125.0;
     int n = 3;
     std::cout << "The " << n << "th root of " << number << " = " << root(number, n) << std::endl;
