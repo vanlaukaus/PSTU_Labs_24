@@ -2,39 +2,31 @@
 #include <iostream>
 #include <cmath>
 
-// Ïåðåãðóæåííàÿ ôóíêöèÿ äëÿ âîçâåäåíèÿ öåëîãî ÷èñëà â ñòåïåíü n
-int power(int base, int exp) {
-    if (exp == 0) return 1;
+int calcfunc(int base, int n) {
     int result = 1;
-    for (int i = 0; i < exp; ++i) {
+    for (int i = 0; i < n; ++i) {
         result *= base;
     }
     return result;
 }
 
-// Ïåðåãðóæåííàÿ ôóíêöèÿ äëÿ èçâëå÷åíèÿ êîðíÿ ñòåïåíè n èç äåñÿòè÷íîãî ÷èñëà
-double root(double number, int n) {
-    if (n == 0) {
-        std::cerr << "Error, the root's power cannot be zero." << std::endl;
-        return 0.0;
+double calcfunc(double base, int n) {
+    if (base < 0 && n % 2 == 0) {
+        std::cerr << "Cannot extract an even root of a negative number!" << std::endl;
+        return NAN;
     }
-    if (number < 0 && n % 2 == 0) {
-        std::cerr << "Error, an even root cannot be extracted from a negative number." << std::endl;
-        return 0.0;
-    }
-    return pow(number, 1.0 / n);
+    return pow(base, 1.0 / n);
 }
 
 int main() {
-    // Äåìîíñòðàöèÿ ðàáîòû ôóíêöèè power
-    int base = 2;
-    int exp = 10;
-    std::cout << base << " raised to the power of " << exp << " = " << power(base, exp) << std::endl;
 
-    // Äåìîíñòðàöèÿ ðàáîòû ôóíêöèè root
-    double number = 125.0;
-    int n = 3;
-    std::cout << "The " << n << "th root of " << number << " = " << root(number, n) << std::endl;
-
+    int intbase = 2;
+    int exp = 3;
+    std::cout << intbase << " raised to the power of " << exp << " = " << calcfunc(intBase, exponent) << std::endl;
+    
+    double doubbase = 27.0;
+    int deg = 3;
+    std::cout << "The " << deg << "th root of " << doubbase << " = " << calcfunc(doubbase, deg) << std::endl;
+    
     return 0;
 }
