@@ -7,39 +7,39 @@ Wage::Wage(const std::string& name, double sal, int bonus)
     : fullName(name), salary(sal), bonusPercent(bonus) {}
 
 Wage::Wage(const Wage& other) {
-    fullName = other.fullName;
+    fullname = other.fullname;
     salary = other.salary;
-    bonusPercent = other.bonusPercent;
+    bonuspercent = other.bonuspercent;
 }
 
 Wage::~Wage() {
     std::cout << "Destructor called for " << fullName << std::endl;
 }
 
-std::string Wage::getFullName() const {
-    return fullName;
+std::string Wage::getfullname() const {
+    return fullname;
 }
 
-double Wage::getSalary() const {
+double Wage::getsalary() const {
     return salary;
 }
 
-int Wage::getBonusPercent() const {
-    return bonusPercent;
+int Wage::getbonus() const {
+    return bonuspercent;
 }
 
-void Wage::setFullName(const std::string& name) {
-    fullName = name;
+void Wage::setfullname(const std::string& name) {
+    fullname = name;
 }
 
 void Wage::setSalary(double sal) {
     salary = sal;
 }
 
-void Wage::setBonusPercent(int bonus) {
-    bonusPercent = bonus;
+void Wage::setbonus(int bonus) {
+    bonuspercent = bonus;
 }
 
-double Wage::calculateTotal() const {
-    return salary + (salary * bonusPercent / 100.0);
+double Wage::total() const {
+    return salary + (salary * bonuspercent / 100.0);
 }
