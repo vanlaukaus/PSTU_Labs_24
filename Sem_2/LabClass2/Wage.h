@@ -1,5 +1,4 @@
-#ifndef WAGE_H
-#define WAGE_H
+#define wage_h
 
 #include <string>
 
