@@ -1,7 +1,7 @@
 #include <iostream>
 #include "Wage.h"
 
-void displayWage(Wage w) {
+void dispwage(Wage w) {
     std::cout << "\nInside displayWage function (copy constructor was called)" << std::endl;
     std::cout << "Employee: " << w.getFullName() << std::endl;
     std::cout << "Salary: " << w.getSalary() << std::endl;
@@ -28,7 +28,7 @@ int main() {
     std::cout << "Employee: " << employee3.getFullName() << std::endl << std::endl;
 
     std::cout << "Before calling displayWage function" << std::endl;
-    displayWage(employee2);
+    dispWage(employee2);
 
     Wage employee4(employee2);
     std::cout << "\nCopy constructor example (case 3 - direct initialization):" << std::endl;
