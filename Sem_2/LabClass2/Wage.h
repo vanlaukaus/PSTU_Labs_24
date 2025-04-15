@@ -15,15 +15,15 @@ public:
 
     ~Wage();
 
-    std::string getFullName() const;
-    double getSalary() const;
-    int getBonusPercent() const;
+    std::string getfullname() const;
+    double getsalary() const;
+    int getbonus() const;
 
-    void setFullName(const std::string& name);
-    void setSalary(double sal);
-    void setBonusPercent(int bonus);
+    void setfullname(const std::string& name);
+    void setsalary(double sal);
+    void setbonus(int bonus);
 
-    double calculateTotal() const;
+    double total() const;
 };
 
 #endif
