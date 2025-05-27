@@ -32,18 +32,14 @@ std::ostream& operator<<(std::ostream& os, const Pair& p) {
     return os;
 }
 
-// Task 1: List operations
 void executeTask1() {
     std::list<Pair> container = { {3, 1.5}, {1, 2.7}, {4, 3.2}, {2, 4.8} };
-
-    // Replace elements where first > 2
+    
     std::replace_if(container.begin(), container.end(),
         [](const Pair& p) { return p.getFirst() > 2; }, Pair(-1, -1.0));
 
-    // Remove elements where second < 3.0
     container.remove_if([](const Pair& p) { return p.getSecond() < 3.0; });
 
-    // Sort ascending and descending
     container.sort([](const Pair& a, const Pair& b) { return a.getFirst() < b.getFirst(); });
     std::cout << "Sorted ascending: ";
     for (const auto& p : container) std::cout << p << " ";
@@ -51,26 +47,22 @@ void executeTask1() {
     container.sort([](const Pair& a, const Pair& b) { return a.getFirst() > b.getFirst(); });
     std::cout << "\nSorted descending: ";
 
-    // Find element with first == 2
     auto it = std::find_if(container.begin(), container.end(),
         [](const Pair& p) { return p.getFirst() == 2; });
     if (it != container.end()) std::cout << "\nFound: " << *it;
 
-    // Add average to end
     int sum = std::accumulate(container.begin(), container.end(), 0,
         [](int acc, const Pair& p) { return acc + p.getFirst(); });
     container.emplace_back(sum / static_cast<int>(container.size()), 0.0);
     std::cout << "\nAfter average: " << container.back();
 }
 
-// Task 2: Priority queue operations
 void executeTask2() {
     std::priority_queue<Pair> container;
     for (const auto& p : { Pair(3, 1.5), Pair(1, 2.7), Pair(4, 3.2), Pair(2, 4.8) }) {
         container.push(p);
     }
 
-    // Remove elements where second < 3.0 (emulated)
     std::priority_queue<Pair> temp;
     while (!container.empty()) {
         if (container.top().getSecond() >= 3.0) temp.push(container.top());
@@ -78,7 +70,6 @@ void executeTask2() {
     }
     container = std::move(temp);
 
-    // Display results
     std::cout << "\nPriority Queue: ";
     while (!container.empty()) {
         std::cout << container.top() << " ";
@@ -86,18 +77,15 @@ void executeTask2() {
     }
 }
 
-// Task 3: Map operations
 void executeTask3() {
     std::map<int, Pair> container = {
         {3, Pair(3, 1.5)}, {1, Pair(1, 2.7)}, {4, Pair(4, 3.2)}, {2, Pair(2, 4.8)}
     };
 
-    // Remove keys in range [2, 3]
     auto lower = container.lower_bound(2);
     auto upper = container.upper_bound(3);
     container.erase(lower, upper);
 
-    // Add sum of min and max to each element
     if (!container.empty()) {
         auto [minIt, maxIt] = std::minmax_element(container.begin(), container.end());
         int sum = minIt->second.getFirst() + maxIt->second.getFirst();
@@ -105,7 +93,6 @@ void executeTask3() {
             [sum](auto& pair) { pair.second.setFirst(pair.second.getFirst() + sum); });
     }
 
-    // Display results
     std::cout << "\nMap contents: ";
     for (const auto& [k, v] : container) std::cout << k << "->" << v << " ";
 }
