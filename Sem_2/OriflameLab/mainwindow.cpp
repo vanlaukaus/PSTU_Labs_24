@@ -39,7 +39,6 @@ void MainWindow::displayMatrix(const std::vector<std::vector<int>>& matrix) {
 
 long long MainWindow::reduceMatrix(std::vector<std::vector<int>>& mat) {
     long long cost = 0;
-    // Reduce rows
     for (auto& row : mat) {
         int min_val = INT_MAX;
         for (int val : row) {
@@ -54,7 +53,6 @@ long long MainWindow::reduceMatrix(std::vector<std::vector<int>>& mat) {
             }
         }
     }
-    // Reduce columns
     for (size_t j = 0; j < mat[0].size(); ++j) {
         int min_val = INT_MAX;
         for (size_t i = 0; i < mat.size(); ++i) {
@@ -140,8 +138,6 @@ void MainWindow::on_nextStepButton_clicked() {
 
     auto edge = selectEdge(current.matrix);
     if (edge.first == -1) return;
-
-    // Include edge
     Node include = current;
     include.matrix[edge.first][edge.second] = INT_MAX;
     include.lower_bound += reduceMatrix(include.matrix);
@@ -151,8 +147,6 @@ void MainWindow::on_nextStepButton_clicked() {
     } else {
         ui->infoText->append("Edge (" + QString::number(edge.first) + ", " + QString::number(edge.second) + ") leads to visited city. Skipped.");
     }
-
-    // Exclude edge
     Node exclude = current;
     exclude.matrix[edge.first][edge.second] = INT_MAX;
     exclude.lower_bound += reduceMatrix(exclude.matrix);
