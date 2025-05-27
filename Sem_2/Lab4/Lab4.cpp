@@ -1,55 +1,58 @@
-//Вариант 15
-
 #include <iostream>
+#include <cstdlib>
 using namespace std;
+int main () {
+    int elements_in_array = 100, size_arr, del_element;
+    int arr[elements_in_array]; //формируем массивы
+    cout << "Enter a count of numbers (min 1 max 50): ";
+    cin >> size_arr;
+    srand(time(0));
+    if (size_arr < elements_in_array && size_arr > 0) {
 
-int main() {
-    const int ogsize = 10;
-    int arr[ogsize] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-    int currsize = ogsize;
-
-    cout << "Original array: ";
-    for (int i = 0; i < currsize; i++) {
-        cout << arr[i] << " ";
-    }
-    cout << endl << endl;
-
-    // 4.2
-    int k = 3;
-    cout << "Left print from k=" << k << ": ";
-    if (currsize > 0) {
-        k = k % currsize;
-        for (int i = 0; i < currsize; i++) {
-            cout << arr[(k - i + currsize) % currsize] << " ";
+        for (int i = 0; i < size_arr; i++) { //заполняем массив рандомными значениями 
+            arr[i] = rand()%100 - 50; //от -50 до 49 значения
         }
-    }
-    cout << endl << endl;
-
-    // 4.3
-    if (currsize > 0) {
-        for (int i = 0; i < currsize - 1; i++) {
-            arr[i] = arr[i + 1];
+        
+        cout << "Array original: ";
+        for (int i = 0; i < size_arr; i++) { //выводим массив
+           cout << arr[i] << " "; 
         }
-        currsize--;
-        if (currsize > 0) currsize--;
-    }
-
-    cout << "Modified array: ";
-    for (int i = 0; i < currsize; i++) {
-        cout << arr[i] << " ";
-    }
-    cout << endl << endl;
-
-    // 4.4
-    k = 2;
-    cout << "Right print from k=" << k << ": ";
-    if (currsize > 0) {
-        k = k % currsize;
-        for (int i = 0; i < currsize; i++) {
-            cout << arr[(k + i) % currsize] << " ";
+        cout << endl;
+        
+        cout << "Enter an element to delete: "; //вводим K для удаления
+        cin >> del_element;
+        
+        for (int i = 0; i < size_arr; i++) { //удаляем
+            if (arr[i] == del_element) {
+                 for (int j = i; j < size_arr - 1; j++) {
+                    arr[j] = arr[j+1]; //сдвигаем влево
+                 }
+                 size_arr--;
+                 i--;
+            }  
         }
+
+       for (int i = 0; i < size_arr; i++) { //для вставки элемента 0 после четного
+            if (arr[i] % 2 == 0) {
+                for (int j = size_arr-1; j > i; j--){
+                    arr[j+1] = arr[j]; //сдвиг вправо
+                }
+                arr[i+1] = 0;
+                size_arr++;
+                i++;
+            }
+        } 
+        
+        cout << "Array now: ";
+        for (int i = 0; i < size_arr; i++) { //вывод
+            cout << arr[i] << " ";
+        }
+        cout << endl;
+
     }
-    cout << endl;
+    else {
+        cout << "You need in another number" << endl;
+    }
 
     return 0;
 }
