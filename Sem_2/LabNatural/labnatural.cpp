@@ -80,7 +80,6 @@ int main() {
     srand(time(0));
     vector<int> data;
 
-    // Генерация случайных данных
     for (int i = 0; i < 10; ++i) {
         data.push_back(rand() % 100);
     }
