@@ -27,8 +27,6 @@ public:
 class EdgeItem : public QGraphicsItem {
 public:
     EdgeItem(QPointF source, QPointF dest, int weight, bool directed = true);
-
-    // Обязательные методы QGraphicsItem
     QRectF boundingRect() const override;
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) override;
 
